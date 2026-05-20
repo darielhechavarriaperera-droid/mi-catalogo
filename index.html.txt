@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Catálogo - GOAT STYLE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>GOAT COMPANY</h1>
+        <p>Tu tienda integral de productos esenciales.</p>
+    </header>
+
+    <main>
+        <section class="grid-productos">
+            <div class="card">
+                <h3>Caja de Malta</h3>
+                <p>24 unidades</p>
+                <span class="precio">546.00 MXN</span>
+            </div>
+            
+            <div class="card">
+                <h3>Cartón de huevos</h3>
+                <p>30 unidades</p>
+                <span class="precio">292.50 MXN</span>
+            </div>
+            </section>
+    </main>
+
+    <footer>
+        <p>Contacto: +52 323 136 7948</p>
+    </footer>
+</body>
+</html>
