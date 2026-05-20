@@ -3,56 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo Digital</title>
-    <!-- Tailwind CSS via CDN -->
+    <title>Mi Tienda Online</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-100">
 
-    <div class="container mx-auto px-4 py-8">
-        <h1 class="text-3xl font-bold text-center mb-8">Nuestro Menú</h1>
+    <header class="bg-white shadow p-5">
+        <h1 class="text-2xl font-bold text-center">Mi Catálogo de Productos</h1>
+    </header>
 
-        <!-- Categorías -->
-        <div class="flex justify-center space-x-4 mb-8">
-            <button onclick="filterProducts('all')" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Todas</button>
-            <button onclick="filterProducts('bebida')" class="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-lg transition">Bebidas</button>
-            <button onclick="filterProducts('comida')" class="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-lg transition">Comida</button>
+    <main class="max-w-6xl mx-auto p-5">
+        <div id="catalogo" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <p class="text-center col-span-3">Cargando productos...</p>
         </div>
+    </main>
 
-        <!-- Grid de Productos -->
-        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            
-            <!-- Producto 1 -->
-            <div class="product-card bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition" data-category="bebida">
-                <img src="https://via.placeholder.com/300" alt="Producto" class="w-full h-40 object-cover rounded-md mb-4">
-                <h2 class="text-xl font-semibold">Refresco Frío</h2>
-                <p class="text-gray-600">$2.50</p>
-                <button class="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">Añadir al carrito</button>
-            </div>
-
-            <!-- Producto 2 -->
-            <div class="product-card bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition" data-category="comida">
-                <img src="https://via.placeholder.com/300" alt="Producto" class="w-full h-40 object-cover rounded-md mb-4">
-                <h2 class="text-xl font-semibold">Hamburguesa Gourmet</h2>
-                <p class="text-gray-600">$8.00</p>
-                <button class="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">Añadir al carrito</button>
-            </div>
-            
-            <!-- Puedes añadir más tarjetas siguiendo este formato -->
-        </div>
-    </div>
-
-    <script>
-        function filterProducts(category) {
-            const cards = document.querySelectorAll('.product-card');
-            cards.forEach(card => {
-                if (category === 'all' || card.getAttribute('data-category') === category) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-    </script>
+    <script type="module" src="app.js"></script>
 </body>
 </html>
